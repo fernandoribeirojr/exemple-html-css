@@ -49,9 +49,16 @@ p {
     color: black;
 }
 
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
 .medium-4,
 .medium-6,
 .medium-12,
+.large-3,
+.large-4,
 .large-6 {
     position: relative;
     width: 100%;
@@ -61,6 +68,12 @@ p {
 }
 
 @media (min-width:992px) {
+    .large-3 {
+        -ms-flex: 0 0 24%;
+        flex: 0 0 24%;
+        max-width: 24%
+    }
+
     .large-4 {
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
@@ -72,6 +85,19 @@ p {
         flex: 0 0 50%;
         max-width: 50%
     }
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .menu {
@@ -98,11 +124,13 @@ p {
     display: block;
 }
 
-.second-section {
+.second-section,
+.sixth-section {
     background-color: #383838;
 }
 
-.third-section {
+.third-section,
+.fifth-section {
     background-color: #fff;
 }
 
@@ -169,6 +197,9 @@ p {
     margin: 20px 0px 65px;
 }
 
+.footer {
+    background-color: white;
+}
 
 /* ==========================================================================
  Main area
@@ -229,12 +260,40 @@ p {
     font-weight: 700;
 }
 
+.contents .small-caption {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.contents .medium-caption {
+    font-size: 22px;
+    line-height: 25.78px;
+    font-weight: 400;
+}
+
+.contents .x-small-caption {
+    font-size: 15px;
+    line-height: 17.58px;
+    font-weight: 700;
+}
+
+.contents .xx-small-footer {
+    font-size: 10px;
+    line-height: 11.72px;
+    font-weight: 400;
+}
+
 .color-white {
     color: white;
 }
 
 .color-black {
     color: black;
+}
+
+.color-orange {
+    color: #FF7630;
 }
 
 .text-bottom {
@@ -246,4 +305,44 @@ p {
     height: 411px;
     left: 748px;
     top: 1751px;
+}
+
+.img-sixth-section {
+    height: 137.3px;
+    width: 287.79px;
+    left: 5.19px;
+    top: 2.03px;
+}
+
+.background-white {
+    background-color: white;
+}
+
+.item {
+    margin: 15px 0;
+    border-radius: 0px;
+    box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 10%);
+}
+
+.item .item-img {
+    position: relative;
+    border-radius: 0px;
+}
+
+.item .item-text {
+    padding: 15px 20px;
+    background: #fff;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
