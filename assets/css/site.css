@@ -1,5 +1,31 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
+    background: #fff;
+    font-size: 14px;
+    font-weight: 400;
     font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #abacae;
+    line-height: 25px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+	display: block
+}
+
+header {
+    display: block;
 }
 
 .menu {
@@ -8,6 +34,7 @@ body {
     width: 100%;
     top: 10px;
     background: rgba(0, 0, 0, 0.69);
+    height: 68px;
 }
 
 .menu ul {
@@ -16,12 +43,77 @@ body {
 
 .menu li {
     color: white;
+    float: right;
+    margin-right: 50px;
 }
 
-.main-section {
+.menu li a {
+    padding: 12px 16px;
+    display: block;
+}
+
+#main-area {
+    color: white;
     background: url(../images/bkg_1_1.png);
+}
+
+#main-area .contents {
+    padding: 170px 0px 50px;
+}
+
+#main-area .contents .head-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .second-section {
     background-color: #383838;
+}
+
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px
+    }
+}
+
+.text-center {
+    text-align: center !important;
 }
