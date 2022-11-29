@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 html {
     overflow-x: hidden;
 }
@@ -20,19 +22,47 @@ body {
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
 section {
-	display: block
+    display: block
 }
 
 header {
     display: block;
 }
 
+.medium-4,
+.medium-6,
+.medium-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+@media (min-width:992px) {
+    .large-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%
+    }
+}
+
 .menu {
-    position: fixed;
+    position: absolute;
     z-index: 1;
     width: 100%;
-    top: 10px;
+    top: 20px;
     background: rgba(0, 0, 0, 0.69);
     height: 68px;
 }
@@ -52,34 +82,21 @@ header {
     display: block;
 }
 
-#main-area {
-    color: white;
-    background: url(../images/bkg_1_1.png);
-}
-
-#main-area .contents {
-    padding: 170px 0px 50px;
-}
-
-#main-area .contents .head-title {
-    color: white;
-    text-transform: uppercase;
-    font-size: 30px;
-    line-height: 48px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
 .second-section {
     background-color: #383838;
 }
 
+.third-section {
+    background-color: #fff;
+}
+
 .row {
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px;
+    margin-left: -15px
 }
 
 .container {
@@ -88,6 +105,7 @@ header {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    min-width: 992px !important
 }
 
 @media (min-width:576px) {
@@ -116,4 +134,79 @@ header {
 
 .text-center {
     text-align: center !important;
+}
+
+.logo {
+    float: left;
+    margin: -8px 0px 0px 95px
+}
+
+.button-separator {
+    margin: 40px 0px;
+}
+
+.separator {
+    margin: 20px 0px 65px;
+}
+
+
+/* ==========================================================================
+ Main area
+========================================================================== */
+#main-area {
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background: url(../images/bkg_1_1.png);
+    height: inherit;
+    background-size: cover;
+}
+
+#main-area .contents {
+    padding: 900px 0px 50px;
+}
+
+#main-area .contents .head-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 51px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#main-area .contents .sous-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 79px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+ SECTIONS
+========================================================================== */
+.contents {
+    padding: 80px 0px 50px;
+}
+
+.contents .title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.contents .caption {
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.text-bottom {
+    display: block;
 }
