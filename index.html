@@ -18,16 +18,16 @@
             </div>
             <ul>
                 <li>
-                    <a>OUR SERVICES</a>
+                    <a href="#services">OUR SERVICES</a>
                 </li>
                 <li>
-                    <a>OUR PRODUCTS</a>
+                    <a href="#products">OUR PRODUCTS</a>
                 </li>
                 <li>
-                    <a>ABOUT US</a>
+                    <a href="#about-us">ABOUT US</a>
                 </li>
                 <li>
-                    <a>CONTACT US</a>
+                    <a href="#contact-us">CONTACT US</a>
                 </li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
         </div>
     </header>
     <!-- SERVICES -->
-    <section class="second-section">
+    <section id="services" class="second-section">
         <div class="container">
             <div class="medium-12">
                 <div class="contents text-center">
@@ -73,7 +73,7 @@
         </div>
     </section>
     <!-- NEWS -->
-    <section class="third-section">
+    <section id="about-us" class="third-section">
         <div class="container">
             <div class="medium-12">
                 <div class="contents">
@@ -102,14 +102,14 @@
         </div>
     </section>
     <!-- PRODUCTS -->
-    <section class="fourth-section">
+    <section id="products" class="fourth-section">
         <div class="container">
             <div class="medium-12">
                 <div class="contents text-center">
                     <h1 class="caption color-white">NEED MORE FOR YOUR FLEET OF ELEVATORS</h1>
                     <h1 class="title color-white">ALL OUR PRODUCTS ARE MADE </br> WITH HEART AND SOUL</h1>
                     <img class="separator" src="assets/images/separator_gray.png" alt="" />
-                    <div class="row">
+                    <div class="row-sectionFour">
                         <div class="large-3">
                             <div class="item">
                                 <div class="item-img">
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row-btn">
                         <div>
                             <button class="button btn" type="button">Download our catalog</button>
                         </div>
@@ -176,7 +176,7 @@
         </div>
     </section>
     <!-- CONTACT -->
-    <section class="fifth-section">
+    <section id="contact-us" class="fifth-section">
         <div class="container">
             <div class="medium-12">
                 <div class="contents text-center">
@@ -184,7 +184,33 @@
                     <h1 class="title color-orange">FEEL FREE TO CONTACT US </br> FOR ANY QUESTIONS</h1>
                     <img class="separator" src="assets/images/separator_gray.png" alt="" />
                     <div class="row">
+                        <form>
+                            <label for="fullname">Name *</label>
+                            <input type="text" placeholder="Enter your full name" value="" name="fullname"
+                                id="fullname" />
+                            <label for="formemail">Email Address *</label>
+                            <input type="email" placeholder="yourname@company.com" value="" name="formemail"
+                                id="formemail" />
+                            <div class="flex-section">
+                                <div>
+                                    <label for="phone">Phone number *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="123-454-6678"
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                </div>
 
+                                <div>
+                                    <label for="formemail">preferred language *</label>
+                                    <select>
+                                        <option value="select">Select</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- <input class="button btn" type="submit" onclick="btmsubmit();" value="Submit" /> -->
+                            <input class="button btn" type="submit" value="Submit"
+                                onclick="alert('Sorry, the form submission is not yet implemented!');" />
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -195,11 +221,11 @@
         <div class="container">
             <div class="medium-12">
                 <div class="contents">
-                    <div class="row">
-                        <div class="large-8">
+                    <div class="row-banner">
+                        <div class="large-6">
                             <h4 class="title color-orange">With your trust since 1943.</h4>
                         </div>
-                        <div class="large-4">
+                        <div class="large-6">
                             <img class="img-sixth-section" src="assets/images/signature.png" alt="" />
                         </div>
                     </div>

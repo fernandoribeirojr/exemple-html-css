@@ -6,20 +6,21 @@ html {
 
 body {
     background: #fff;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: #abacae;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
     -webkit-font-smoothing: subpixel-antialiased;
-    color: #abacae;
-    line-height: 25px;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+
 }
 
 h1,
@@ -41,17 +42,18 @@ header {
 }
 
 p {
+    color: black;
     font-size: 20px;
-    line-height: 22px;
     font-weight: 400;
+    line-height: 22px;
     margin: 0;
     padding: 0;
-    color: black;
+
 }
 
 img {
-    vertical-align: middle;
     border-style: none;
+    vertical-align: middle;
 }
 
 .medium-4,
@@ -59,38 +61,30 @@ img {
 .medium-12,
 .large-3,
 .large-4,
-.large-6,
-.large-8 {
+.large-6 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
     position: relative;
     width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
 }
 
 @media (min-width:992px) {
     .large-3 {
-        -ms-flex: 0 0 24%;
-        flex: 0 0 24%;
+        flex: 0 0 20%;
         max-width: 24%
     }
 
     .large-4 {
-        -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
+        -ms-flex: 0 0 33.333333%;
         max-width: 33.333333%
     }
 
     .large-6 {
-        -ms-flex: 0 0 50%;
         flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
         max-width: 50%
-    }
-
-    .large-8 {
-        -ms-flex: 0 0 66.666667%;
-        flex: 0 0 66.666667%;
-        max-width: 66.666667%
     }
 }
 
@@ -98,37 +92,47 @@ img {
     background-color: transparent;
     border: 2px solid white;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+    cursor: pointer;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
 }
 
 .menu {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 20px;
     background: rgba(0, 0, 0, 0.69);
     height: 68px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 1;
 }
 
 .menu ul {
+    display: flex;
+    justify-content: flex-end;
     list-style-type: none;
 }
 
 .menu li {
     color: white;
-    float: right;
     margin-right: 50px;
 }
 
 .menu li a {
-    padding: 12px 16px;
+    color: white;
     display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.menu li a:active,
+.menu li a:visited {
+    color: white;
+    text-decoration: none;
 }
 
 .second-section,
@@ -136,31 +140,125 @@ img {
     background-color: #383838;
 }
 
+.row-banner {
+    /* display: -ms-flexbox; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 50px;
+}
+
+
+
 .third-section,
 .fifth-section {
     background-color: #fff;
+}
+
+.flex-section {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.flex-section div {
+    flex: 1;
+}
+
+.fifth-section form {
+    color: black;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+
+.fifth-section form label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+
+}
+
+.fifth-section form input,
+.fifth-section form select {
+    border: 1px solid #A0A0A0;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 12px;
+    width: 100%;
+}
+
+.fifth-section form select {
+    padding-bottom: 11px;
+}
+
+.fifth-section form input {
+    margin-bottom: 16px;
+}
+
+.fifth-section form input[type="submit"] {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+}
+
+.fifth-section form input[type="submit"]:hover {
+    background-color: #eee;
+
 }
 
 .fourth-section {
     background-color: #FF7630;
 }
 
-.row {
-    display: -ms-flexbox;
+/* section cuatro */
+/* .sectionfour {
     display: flex;
-    -ms-flex-wrap: nowrap;
+    flex-wrap: wrap;
+
+}
+
+.flex {
+    display: flex;
+}
+
+article {
+    background-color: blue;
+    flex: 0 1 20%
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article:nth-child(odd) {
+    background-color: red;
+} */
+
+/* se acaba section 4 */
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
     margin-right: -15px;
     margin-left: -15px;
-    flex-wrap: nowrap;
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
     margin-left: auto;
-    min-width: 992px !important
+    margin-right: auto;
+    min-width: 992px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
 }
 
 @media (min-width:576px) {
@@ -172,6 +270,18 @@ img {
 @media (min-width:768px) {
     .container {
         max-width: 720px
+    }
+
+    .flex-section {
+        display: flex;
+    }
+
+    .flex-section div:first-child {
+        margin-right: 16px;
+    }
+
+    .flex-section div:last-child {
+        margin-left: 16px;
     }
 }
 
@@ -212,11 +322,11 @@ img {
  Main area
 ========================================================================== */
 #main-area {
+    background: url(../images/bkg_1_1.png);
+    background-size: cover;
+    height: inherit;
     overflow: hidden;
     position: relative;
-    background: url(../images/bkg_1_1.png);
-    height: inherit;
-    background-size: cover;
 }
 
 #main-area .contents {
@@ -224,19 +334,19 @@ img {
 }
 
 #main-area .contents .head-title {
-    text-transform: uppercase;
     font-size: 51px;
-    line-height: 59.77px;
     font-weight: 800;
+    line-height: 59.77px;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 #main-area .contents .sous-title {
-    text-transform: uppercase;
     font-size: 79px;
-    line-height: 92.58px;
     font-weight: 900;
+    line-height: 92.58px;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -248,44 +358,48 @@ img {
 
 .contents .title {
     font-size: 45px;
-    line-height: 52.73px;
     font-weight: 900;
+    line-height: 52.73px;
+    text-transform: uppercase;
+
 }
 
 .contents .sous-title {
     font-size: 36px;
-    line-height: 42.19px;
     font-weight: 900;
+    line-height: 42.19px;
+    text-transform: uppercase;
 }
 
 .contents .caption {
     font-size: 25px;
-    line-height: 29.3px;
     font-weight: 700;
+    line-height: 29.3px;
+    text-transform: uppercase;
 }
 
 .contents .small-caption {
     font-size: 20px;
-    line-height: 22px;
     font-weight: 400;
+    line-height: 22px;
 }
 
 .contents .medium-caption {
     font-size: 22px;
-    line-height: 25.78px;
     font-weight: 400;
+    line-height: 25.78px;
 }
 
 .contents .x-small-caption {
     font-size: 15px;
-    line-height: 17.58px;
     font-weight: 700;
+    line-height: 17.58px;
 }
 
 .contents .xx-small-footer {
     font-size: 10px;
-    line-height: 11.72px;
     font-weight: 400;
+    line-height: 11.72px;
 }
 
 .color-white {
@@ -305,42 +419,43 @@ img {
 }
 
 .img-third-section {
-    width: 615px;
     height: 411px;
     left: 748px;
     top: 1751px;
+    width: 615px;
 }
 
 .img-sixth-section {
     height: 137.3px;
-    width: 287.79px;
     left: 5.19px;
     top: 2.03px;
+    width: 287.79px;
 }
 
 .background-white {
     background-color: white;
 }
 
+/* 
 .item {
     margin: 15px 0;
     border-radius: 0px;
     box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 10%);
-}
+} */
 
 .item .item-img {
-    position: relative;
     border-radius: 0px;
+    position: relative;
 }
 
 .item .item-text {
-    padding: 15px 20px;
     background: #fff;
+    padding: 15px 20px;
 }
 
 .img-fluid {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
 }
 
 .float-left {
@@ -349,4 +464,25 @@ img {
 
 .float-right {
     float: right;
+}
+
+/* exemple section four with row css diferente */
+.row-sectionFour {
+    /* display: -ms-flexbox; */
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 4px;
+    margin-right: 310px;
+
+
+}
+
+.row-btn {
+    /* display: -ms-flexbox; */
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 50px;
 }
